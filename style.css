@@ -6,13 +6,12 @@ body {
 .title {
     display: block;
     text-align: center;
-    padding: 10px 0;
-    font-weight: 900;
+    font-weight: 600;
     font-size: 60px;
     margin-bottom: 10px;
 }
 
-.game-board {
+.board {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
