@@ -1,18 +1,18 @@
 const cardWraps = document.querySelectorAll(".card_wrap");
 const cards = document.querySelectorAll(".card");
 
-let hasFlippedCard = false;
-let lockBoard = false;
+let pttvel = false;
+let stugum = false;
 let firstCard, secondCard;
 
 function flipCard() {
-    if (lockBoard) return;
+    if (stugum) return;
     if (this === firstCard) return;
 
     this.classList.add("open");
 
-    if (!hasFlippedCard) {
-        hasFlippedCard = true;
+    if (!pttvel) {
+        pttvel = true;
         firstCard = this;
         return;
     }
@@ -38,7 +38,7 @@ function disableCards() {
 }
 
 function unflipCards() {
-    lockBoard = true;
+    stugum = true;
 
     firstCard.classList.add("unmatched");
     secondCard.classList.add("unmatched");
@@ -54,7 +54,7 @@ function unflipCards() {
 }
 
 function resetBoard() {
-    [hasFlippedCard, lockBoard] = [false, false];
+    [pttvel, stugum] = [false, false];
     [firstCard, secondCard] = [null, null];
 }
 
